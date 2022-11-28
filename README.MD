@@ -10,13 +10,11 @@ The aim of this project is:<br>
   <li>Both Farmer and customer set up meet and deliver location</li>
 </ol>
 
-### HOW I CREATED THE PROJECT
-
-Install xampp or any server software <br>
-https://www.apachefriends.org/download.html<br>
+## FUNCTIONAL REQUIREMENTS
 
 ### Info about the project
 
+This project is intallable on android devices since its a PWA <br>
 This is a php project with a SQL database engine.<br>
 The project must be ran in a server environment.<br>
 After installation on browser run **_localhost/foody_**
