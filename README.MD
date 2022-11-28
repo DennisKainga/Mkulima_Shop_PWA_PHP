@@ -1,8 +1,4 @@
-## MKULIMA SOKO
-
-**translation**
-
-## Farmners Market
+## MKULIMA SOKO **translation** ## Farmners Market
 
 ### PROJECT DEFINITION
 
@@ -12,7 +8,6 @@ The aim of this project is:<br>
   <li>Farmers POST products</li>
   <li>Customers can order the products</li>
   <li>Both Farmer and customer set up meet and deliver location</li>
-  <li></li>
 </ol>
 
 ### HOW I CREATED THE PROJECT
