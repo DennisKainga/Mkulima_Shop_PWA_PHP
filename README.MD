@@ -22,6 +22,7 @@ After installation on browser run **_localhost/foody_**
 ### Database Script
 
 The database script is RAW SQL that I typed so just copy and paste as a new script and run it.<br>
+The database file is a .txt file stored in engine called FOODY.txt. <br>
 Be sure to CREATE DATABASE foody and use it : )<br>
 
 ### Database Settings

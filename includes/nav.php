@@ -28,8 +28,8 @@
                 <a href="index.php" class="nav-item nav-link">Home</a>
                 <?php if (isset($_SESSION["rank"])) : ?>
                     <?php if ($_SESSION["rank"] == "farmer") : ?>
-                        <a href="farmer_prod.php" class="nav-item nav-link">My products</a>
-                        <a href="farmer_prod.php" class="nav-item nav-link">Orders</a>
+                        <a href="farmer.php" class="nav-item nav-link">My products</a>
+                        <a href="farmer.php" class="nav-item nav-link">Orders</a>
                     <?php endif; ?>
                     <?php if ($_SESSION["rank"] == "customer") : ?>
                         <a href="register.php" class="nav-item nav-link">Basket</a>
