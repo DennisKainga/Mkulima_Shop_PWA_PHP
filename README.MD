@@ -12,8 +12,8 @@ https://www.apachefriends.org/download.html
 
 ### Database Script
 
-The database script is RAW SQL that i type so just copy and paste as a new script and run it.<br>
-Be sure to CREATE DATABASE foody and use it<br>
+The database script is RAW SQL that I typed so just copy and paste as a new script and run it.<br>
+Be sure to CREATE DATABASE foody and use it : )<br>
 
 ### Database Settings
 
