@@ -1,14 +1,30 @@
-## How I Created The Project From Scratch:
+## MKULIMA SOKO
+
+**translation**
+
+## Farmners Market
+
+### PROJECT DEFINITION
+
+The aim of this project is:<br>
+
+<ol>
+  <li>Farmers POST products</li>
+  <li>Customers can order the products</li>
+  <li>Both Farmer and customer set up meet and deliver location</li>
+  <li></li>
+</ol>
+
+### HOW I CREATED THE PROJECT
+
+Install xampp or any server software <br>
+https://www.apachefriends.org/download.html<br>
 
 ### Info about the project
 
 This is a php project with a SQL database engine.<br>
 The project must be ran in a server environment.<br>
 After installation on browser run **_localhost/foody_**
-
-### Install xampp or any server software
-
-https://www.apachefriends.org/download.html
 
 ### Database Script
 
