@@ -14,13 +14,13 @@ $page = $_GET["page"];
             <section class="content">
                 <div class="container-fluid">
                     <?php if ($page == 'town') : ?>
-                        <?php include_once "./pages/city/index.php" ?>
+                        <?php include_once "./page_assets/city/index.php" ?>
                     <?php elseif ($page == 'county') : ?>
-                        <?php include_once "./pages/county/index.php" ?>
+                        <?php include_once "./page_assets/county/index.php" ?>
                     <?php elseif ($page == 'user') : ?>
-                        <?php include_once "./pages/users/index.php" ?>
+                        <?php include_once "./page_assets/users/index.php" ?>
                     <?php elseif ($page == 'cats') : ?>
-                        <?php include_once "./pages/categories/index.php" ?>
+                        <?php include_once "./page_assets/categories/index.php" ?>
                     <?php endif ?>
                 </div>
             </section>

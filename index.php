@@ -8,16 +8,6 @@ if (isset($_GET['pageno'])) {
     $pageno = 1;
 }
 
-// $no_of_records_per_page = 10;
-// $offset = ($pageno - 1) * $no_of_records_per_page;
-// $total_pages_sql = $pdo->prepare("SELECT COUNT(*) FROM products");
-// $total_pages_sql->execute();
-// $result = $total_pages_sql->fetchAll(PDO::FETCH_ASSOC);
-
-// $total_rows = $result[0];
-// $total_pages = ceil($total_rows / $no_of_records_per_page);
-
-
 $statement = $pdo->prepare("SELECT * FROM category");
 $statement->execute();
 $cats = $statement->fetchAll(PDO::FETCH_ASSOC);
