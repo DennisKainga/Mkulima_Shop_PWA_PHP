@@ -40,12 +40,14 @@ $categorys = $statement->fetchAll(PDO::FETCH_ASSOC);
                                             </div>
                                         </div>
                                         <div class="mt-1 d-flex">
-                                            <a class="btn btn-primary w-50 mx-2" data-bs-toggle="modal" data-bs-target="#updatemodal">Edit</a>
+                                            <a class="btn btn-primary w-50 mx-2" data-bs-toggle="modal" data-bs-target="#updatemodal<?php echo $category['category_id']?>">Edit</a>
                                             <a class="btn btn-danger w-50 mx-2" href="engine/action.php?action=user_del&id=<?php echo $category["category_id"] ?>">Delete</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                    <?php include_once "update_modal.php"?>
+                    
                     <?php }
                     endforeach; ?>
                 </div>

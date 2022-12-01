@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $statement->bindValue(":cat", $cat);
     $statement->bindValue(":id", $id);
     $statement->execute();
-    header("Location: farmer_prod.php");
+    header("Location: farmer.php");
 }
 ?>
 
