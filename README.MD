@@ -1,4 +1,4 @@
-## MKULIMA SOKO **translation** ## Farmners Market
+## MKULIMA SOKO **translation** ## Farmers Market
 
 ### PROJECT DEFINITION
 
