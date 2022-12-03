@@ -1,5 +1,4 @@
 <?php
-
 $statement = $pdo->prepare("SELECT * FROM county");
 $statement->execute();
 $countys = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -19,9 +18,7 @@ $countys = $statement->fetchAll(PDO::FETCH_ASSOC);
             <div class="col-12 text-center wow fadeInUp mt-5 sticky-lg-top" data-wow-delay="0.1s">
                 <a class="btn btn-primary rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#citycreatemodal" href="">Create New County</a>
             </div>
-            <?php include_once "create_modal.php" ?>
             <div class="container mt-5 mb-3">
-
                 <div class="row">
                     <?php foreach ($countys as $county) : { ?>
                             <div class="col-md-4 mb-2">
@@ -38,17 +35,18 @@ $countys = $statement->fetchAll(PDO::FETCH_ASSOC);
                                     <div class="mt-3">
                                         <p class="heading"><?php echo '<i class="fa fa-user text-secondary me-3"></i>' . ucwords($county["county_name"]) ?></p>
                                         <div class="mt-2 d-flex">
-                                            <a class="btn btn-primary w-50 mx-2" data-bs-toggle="modal" data-bs-target="#updatemodal">Edit</a>
-                                            <a class="btn btn-danger w-50 mx-2" href="engine/action.php?action=user_del&id=<?php echo $county["county_id"] ?>">Delete</a>
+                                            <a class="btn btn-primary w-50 mx-2" data-bs-toggle="modal" data-bs-target="#countyupdate<?php echo $county['county_id'] ?>">Edit</a>
+                                            <a class="btn btn-danger w-50 mx-2" href="engine/action.php?action=county_del&id=<?php echo $county["county_id"] ?>">Delete</a>
                                         </div>
                                     </div>
                                 </div>
+                                <?php include "county_update.php" ?>
                             </div>
                     <?php }
                     endforeach; ?>
                 </div>
             </div>
-            <!-- End of Tab 1 -->
         </div>
     </div>
+    <?php include_once "create_county.php" ?>
 </div>

@@ -3,7 +3,7 @@
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-lg-3 col-md-6">
-                <h1 class="fw-bold text-primary mb-4">F<span class="text-secondary">oo</span>dy</h1>
+                <h6 class="fw-bold text-primary mb-4">MKU<span class="text-secondary">LIMA</span></h6>
                 <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita</p>
                 <div class="d-flex pt-2">
                     <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i class="fab fa-twitter"></i></a>
@@ -14,17 +14,14 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-light mb-4">Address</h4>
-                <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, Limuru, Kenya</p>
+                <p><i class="fa fa-phone-alt me-3"></i>+2547 08 326 722</p>
                 <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-light mb-4">Quick Links</h4>
-                <a class="btn btn-link" href="">About Us</a>
-                <a class="btn btn-link" href="">Contact Us</a>
-                <a class="btn btn-link" href="">Our Services</a>
-                <a class="btn btn-link" href="">Terms & Condition</a>
-                <a class="btn btn-link" href="">Support</a>
+                <a class="btn btn-link" href="">Home</a>
+
             </div>
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-light mb-4">Newsletter</h4>
@@ -44,8 +41,8 @@
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                    <br>Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                    <!-- Designed By <a href="https://htmlcodex.com">HTML Codex</a> -->
+                    <!-- <br><a href="https://themewagon.com" target="_blank"></a> -->
                 </div>
             </div>
         </div>

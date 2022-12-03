@@ -3,7 +3,6 @@ $statement = $pdo->prepare("SELECT * FROM town");
 $statement->execute();
 $towns = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-
 ?>
 
 <div class="container-xxl py-5" id="app">
@@ -20,7 +19,7 @@ $towns = $statement->fetchAll(PDO::FETCH_ASSOC);
             <div class="col-12 text-center wow fadeInUp mt-5 sticky-lg-top" data-wow-delay="0.1s">
                 <a class="btn btn-primary rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#citycreatemodal" href="">Create New City</a>
             </div>
-            <?php include_once "create_modal.php" ?>
+            <?php include_once "create_city.php" ?>
             <div class="container mt-5 mb-0">
                 <div class="row">
                     <?php foreach ($towns as $town) : { ?>
@@ -44,6 +43,7 @@ $towns = $statement->fetchAll(PDO::FETCH_ASSOC);
                                     </div>
                                 </div>
                             </div>
+                            <?php include "update_city.php" ?>
                     <?php }
                     endforeach; ?>
                 </div>

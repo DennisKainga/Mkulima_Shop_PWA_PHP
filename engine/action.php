@@ -10,12 +10,19 @@ if ($action == "del") {
     $statement = $pdo->prepare("DELETE FROM products WHERE product_id=:id");
     $statement->bindValue(":id", $_GET["id"]);
     $statement->execute();
-    header("Location: ../farmer_prod.php");
+    header("Location: ../farmer.php");
 }
 
 if ($action == "user_del") {
     $statement = $pdo->prepare("DELETE FROM login WHERE login_id=:id");
     $statement->bindValue(":id", $_GET["id"]);
     $statement->execute();
-    header("Location: ../admin_index.php?page=user");
+    header("Location: ../admin.php?page=user");
+}
+
+if ($action == "county_del") {
+    $statement = $pdo->prepare("DELETE FROM county WHERE county_id=:id");
+    $statement->bindValue(":id", $_GET["id"]);
+    $statement->execute();
+    header("Location: ../admin.php?page=county");
 }

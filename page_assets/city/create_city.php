@@ -12,8 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $statement = $pdo->prepare("UPDATE town SET town_name=:name,
                                 town_description=:town_desc,
-                                town_county_id=:county_id WHERE town_id:id); 
-    $statement->bindValue("id",$city_id);
+                                town_county_id=:county_id WHERE town_id:id");
+    $statement->bindValue("id", $city_id);
     $statement->bindValue(":name", $city_name);
     $statement->bindValue(":desc", $description);
     $statement->bindValue(":county_id", $county_id);
@@ -33,8 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" enctype="multipart/form-data" action="">
-                            <input type="hidden" name="city_id" value="<?php echo $town['town_id']?>">
+                <form method="POST" enctype="multipart/form-data" action='<?php echo $_SERVER['PHP_SELF'] ?>'>
+                    <input type="hidden" name="city_id" value="<?php echo $town['town_id'] ?>">
                     <div class="row">
                         <div class="form-group text-left mb-3 col">
                             <label>City Name</label>

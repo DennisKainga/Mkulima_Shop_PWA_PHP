@@ -1,43 +1,3 @@
-<?php
-require_once "engine/dbh.inc.php";
-$name = "";
-$price = "";
-$stock = "";
-$unit_type = "";
-$qty = "";
-$cat = "";
-$id = "";
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["name"];
-    $price = $_POST["price"];
-    $stock = $_POST["stock"];
-    $unit_type = $_POST["unit_type"];
-    $qty = $_POST["qty"];
-    $cat = $_POST["cat"];
-    $id = $_POST["product_id"];
-
-
-    $statement = $pdo->prepare("UPDATE products SET 
-                            product_name=:name,
-                            product_price=:price,
-                            product_is_stocked=:stock,
-                            product_unit_type=:unit_type,
-                            product_quantity=:qty,
-                            product_category_id=:cat WHERE product_id=:id");
-
-    $statement->bindValue(":name", $name);
-    $statement->bindValue(":price", $price);
-    $statement->bindValue(":stock", $stock);
-    $statement->bindValue(":unit_type", $unit_type);
-    $statement->bindValue(":qty", $qty);
-    $statement->bindValue(":cat", $cat);
-    $statement->bindValue(":id", $id);
-    $statement->execute();
-    header("Location: farmer.php");
-}
-?>
-
-
 <div class="modal fade" id="updatemodal<?php echo $product["product_id"] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -48,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" enctype="multipart/form-data" action="update_modal.php">
+                <form method="POST" enctype="multipart/form-data" action='page_assets/products/update_engine.php'>
                     <input type="hidden" name="product_id" value="<?php echo $product["product_id"] ?>">
                     <div class="row">
                         <div class="form-group  mb-3 col">

@@ -9,7 +9,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" enctype="multipart/form-data" action="">
+                <form method="POST" enctype="multipart/form-data" action="page_assets/products/save.php">
                     <div class="row">
                         <div class="form-group mb-3 col">
                             <label>Product Image</label>
