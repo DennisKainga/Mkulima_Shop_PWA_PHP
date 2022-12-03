@@ -43,21 +43,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="wrapper">
         <!-- Navbar -->
         <?php include_once "includes/nav.php" ?>
-        <!-- Main Sidebar Container -->
-        <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
-                    <!-- Info boxes -->
-                    <!-- Product Start -->
-                    <?php include "pages/products/index.php" ?>
-                    <!--/. container-fluid -->
+                    <?php include "page_assets/products/index.php" ?>
             </section>
-            <!-- /.content -->
         </div>
-        <!-- /.content-wrapper -->
-        <!-- Main Footer -->
-
     </div>
     <?php require_once "includes/footer.php" ?>
