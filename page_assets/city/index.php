@@ -1,8 +1,7 @@
 <?php
-$statement = $pdo->prepare("SELECT * FROM town");
+$statement = $pdo->prepare("SELECT town.*,county.county_name AS cur_county FROM town INNER JOIN county ON county.county_id=town.town_county_id");
 $statement->execute();
 $towns = $statement->fetchAll(PDO::FETCH_ASSOC);
-
 ?>
 
 <div class="container-xxl py-5" id="app">
@@ -37,13 +36,13 @@ $towns = $statement->fetchAll(PDO::FETCH_ASSOC);
                                     <div class="mt-3">
                                         <p class="heading"><?php echo '<i class="fa fa-user text-secondary me-3"></i>' . ucwords($town["town_name"]) ?></p>
                                         <div class="mt-2 d-flex">
-                                            <a class="btn btn-primary w-50 mx-2" data-bs-toggle="modal" data-bs-target="#updatemodal">Edit</a>
+                                            <a class="btn btn-primary w-50 mx-2" data-bs-toggle="modal" data-bs-target="#cityupdate<?php echo $town["town_id"] ?>">Edit</a>
                                             <a class="btn btn-danger w-50 mx-2" href="engine/action.php?action=user_del&id=<?php echo $town["town_id"] ?>">Delete</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <?php include "update_city.php" ?>
+                            <?php include "city_update.php" ?>
                     <?php }
                     endforeach; ?>
                 </div>
