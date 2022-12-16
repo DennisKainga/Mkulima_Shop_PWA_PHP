@@ -183,15 +183,17 @@ $cats = array_reverse($cats);
                                                     <span class="text-body text-decoration-line-through">ksh1000</span>
                                                 </div>
                                                 <div class="d-flex border-top">
-                                                    <small class="w-50 text-center border-end py-2">
-                                                        <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                                    </small>
+
                                                     <form method="POST" action="engine/add-cart.php">
+                                                        <small class="w-50 text-center border-end py-2">
+                                                            <input type="number" name="qty" class="form-group w-25" min="1" value="1">
+                                                        </small>
                                                         <input type="hidden" name="id" value="<?php echo $product['product_id'] ?>">
                                                         <input type="hidden" name="price" value="<?php echo $product['product_price'] ?>">
                                                         <small class="w-50 text-center py-2">
                                                             <button class="text-body btn" type="submit"><i class="fa fa-shopping-bag text-primary me-1"></i>Add to cart</button>
                                                         </small>
+
                                                     </form>
                                                 </div>
                                             </div>
