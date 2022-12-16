@@ -18,6 +18,7 @@ $cats = array_reverse($cats);
     <!-- Navbar End -->
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <?php include "page_assets/cart/cart-modal.php" ?>
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -185,9 +186,13 @@ $cats = array_reverse($cats);
                                                     <small class="w-50 text-center border-end py-2">
                                                         <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
                                                     </small>
-                                                    <small class="w-50 text-center py-2">
-                                                        <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                                    </small>
+                                                    <form method="POST" action="engine/add-cart.php">
+                                                        <input type="hidden" name="id" value="<?php echo $product['product_id'] ?>">
+                                                        <input type="hidden" name="price" value="<?php echo $product['product_price'] ?>">
+                                                        <small class="w-50 text-center py-2">
+                                                            <button class="text-body btn" type="submit"><i class="fa fa-shopping-bag text-primary me-1"></i>Add to cart</button>
+                                                        </small>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -202,16 +207,6 @@ $cats = array_reverse($cats);
                         </div>
                 <?php }
                 endforeach; ?>
-                <!-- <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                    </ul>
-                </nav> -->
-                <!-- End of Tab 1 -->
             </div>
         </div>
     </div>

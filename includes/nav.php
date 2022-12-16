@@ -1,5 +1,7 @@
 <?php
 
+$cart = $_SESSION['cart'] ?? [];
+$size_cart = sizeof($cart);
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn mt-4 fixed-top" data-wow-delay="0.1s">
@@ -31,11 +33,13 @@
                         <a href="farmer.php" class="nav-item nav-link">My products</a>
                         <a href="farmer.php" class="nav-item nav-link">Orders</a>
                     <?php endif; ?>
+
                     <?php if ($_SESSION["rank"] == "customer") : ?>
-                        <a href="register.php" class="nav-item nav-link">Basket</a>
-                        <a href="register.php" class="nav-item nav-link">Orders</a>
+                        <a data-bs-toggle="modal" data-bs-target="#cart" class="nav-item nav-link btn">Cart <i class="fa fa-shopping-bag text-primary"></i><sup><span><?php echo $size_cart ?></span></sup></a>
+                        <a href="customer.php?page=orders" class="nav-item nav-link">Orders</a>
                     <?php endif; ?>
                 <?php endif; ?>
+
                 <?php if (!isset($_SESSION["uid"])) : ?>
                     <a href="login.php" class="nav-item nav-link">Log in</a>
                     <a href="register.php" class="nav-item nav-link">Register</a>
