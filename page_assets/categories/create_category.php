@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $statement->bindValue(":name", $county_name);
     $statement->bindValue(":cat_desc", $category_desc);
     $statement->execute();
-    header("Refresh:0?page=categories");
+    header("Location: admin.php?page=cats");
 }
 ?>
 <div class="modal fade" id="citycreatemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" enctype="multipart/form-data" action='<?php echo $_SERVER['PHP_SELF'] ?>'>
+                <form method="POST" enctype="multipart/form-data" action=''>
                     <div class="row">
                         <div class="form-group text-left mb-3 col">
                             <label>Category Name</label>

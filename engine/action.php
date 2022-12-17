@@ -47,6 +47,7 @@ if ($action == "checkout") {
             $statement->bindValue(":prod", $item['id']);
             $statement->execute();
         }
+        $_SESSION['cart'] = array();
         header("Location: ../index.php?mess=itemaddedtocart");
     } else {
         header("Location: ../index.php?mess=noitemsincart");

@@ -34,4 +34,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $statement->execute();
 }
 
-header("Location: ../../farmer.php");
+header("Location: ../../farmer.php?page=prod");

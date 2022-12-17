@@ -4,6 +4,7 @@ include_once "includes/header.php";
 $statement = $pdo->prepare("SELECT * FROM category");
 $statement->execute();
 $cats = $statement->fetchAll(PDO::FETCH_ASSOC);
+$page = $_GET["page"];
 ?>
 
 <body class="hold-transition light-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
@@ -14,7 +15,11 @@ $cats = $statement->fetchAll(PDO::FETCH_ASSOC);
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
-                    <?php include "page_assets/products/index.php" ?>
+                    <?php if ($page == "prod") : ?>
+                        <?php include "page_assets/products/index.php" ?>
+                    <?php elseif ($page == 'order') : ?>
+                        <?php include "page_assets/orders/index.php" ?>
+                    <?php endif ?>
             </section>
         </div>
     </div>

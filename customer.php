@@ -15,8 +15,8 @@ $page = $_GET['page'];
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
-                    <?php if ($page == "cart") : { ?>
-                            <?php include "page_assets/cart/index.php" ?>
+                    <?php if ($page == "orders") : { ?>
+                            <?php include "page_assets/orders/index.php" ?>
                     <?php }
                     endif ?>
             </section>
