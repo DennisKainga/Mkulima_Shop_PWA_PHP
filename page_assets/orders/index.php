@@ -130,7 +130,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
             <?php if ($_SESSION["rank"] == "farmer") : ?>
                 <div class=" col-12 text-center wow fadeInUp mt-5" data-wow-delay="0.1s">
-                    <a class="btn btn-primary rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#createmodal" href="">Generate report</a>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="page_assets/orders/reports.php">Generate report</a>
                 </div>
             <?php endif ?>
 
