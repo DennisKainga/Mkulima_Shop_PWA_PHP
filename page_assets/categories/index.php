@@ -15,12 +15,13 @@ $categorys = $statement->fetchAll(PDO::FETCH_ASSOC);
         </div>
         <div class="tab-content">
             <div class="col-12 text-center wow fadeInUp mt-5 sticky-lg-top" data-wow-delay="0.1s">
-                <a class="btn btn-primary rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#citycreatemodal" href="">Create New Category</a>
+                <a class="btn btn-primary rounded-pill py-3 px-5" data-bs-toggle="modal" data-bs-target="#catcreatemodal" href="">Create New Category</a>
             </div>
             <?php include_once "create_category.php" ?>
             <div class="container mt-5 mb-3">
                 <div class="row">
                     <?php foreach ($categorys as $category) : { ?>
+
                             <div class="col-md-4">
                                 <div class="card p-3 mb-0 bg-white">
                                     <div class="d-flex justify-content-between">
@@ -41,7 +42,7 @@ $categorys = $statement->fetchAll(PDO::FETCH_ASSOC);
                                         </div>
                                         <div class="mt-1 d-flex">
                                             <a class="btn btn-primary w-50 mx-2" data-bs-toggle="modal" data-bs-target="#updatemodal<?php echo $category['category_id'] ?>">Edit</a>
-                                            <a class="btn btn-danger w-50 mx-2" href="engine/action.php?action=user_del&id=<?php echo $category["category_id"] ?>">Delete</a>
+                                            <a class="btn btn-danger w-50 mx-2" href="engine/action.php?action=cat_del&id=<?php echo $category["category_id"] ?>">Delete</a>
                                         </div>
                                     </div>
                                 </div>

@@ -26,6 +26,13 @@ if ($action == "county_del") {
     $statement->execute();
     header("Location: ../admin.php?page=county");
 }
+
+if ($action == "cat_del") {
+    $statement = $pdo->prepare("DELETE FROM category WHERE category_id=:id");
+    $statement->bindValue(":id", $_GET["id"]);
+    $statement->execute();
+    header("Location: ../admin.php?page=cats");
+}
 if ($action == "remove") {
     $id = $_GET["cid"];
     unset($_SESSION['cart'][$id]);

@@ -100,7 +100,7 @@ $prod_infos = $statement->fetchAll(PDO::FETCH_ASSOC);
 
                 },
                 styles: {
-                    minCellHeight: 40
+                    minCellHeight: 15
                 }
             })
 

@@ -1,18 +1,5 @@
 <!-- Modal -->
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $category_name = $_POST["category_name"];
-    $category_desc = $_POST["category_desc"];
-
-    $statement = $pdo->prepare("INSERT INTO category(category_name,category_description)
-    VALUES(:name,:cat_desc)");
-    $statement->bindValue(":name", $county_name);
-    $statement->bindValue(":cat_desc", $category_desc);
-    $statement->execute();
-    header("Location: admin.php?page=cats");
-}
-?>
-<div class="modal fade" id="citycreatemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="catcreatemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -22,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" enctype="multipart/form-data" action=''>
+                <form method="POST" enctype="multipart/form-data" action="page_assets/categories/save.php">
                     <div class="row">
                         <div class="form-group text-left mb-3 col">
                             <label>Category Name</label>

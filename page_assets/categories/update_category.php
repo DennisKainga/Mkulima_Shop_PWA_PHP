@@ -1,17 +1,5 @@
 <!-- Modal -->
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $category_id = $_POST['category_id'];
-    $category_name = $_POST["category_name"];
-    $category_desc = $_POST["category_desc"];
-    $statement = $pdo->prepare("UPDATE category SET category_name=:name,category_description=:cat_desc WHERE category_id=:id");
-    $statement->bindValue(":name", $county_name);
-    $statement->bindValue(":cat_desc", $category_desc);
-    $statement->bindvalue(":id", $category_id);
-    $statement->execute();
-    header("Refresh:0");
-}
-?>
+
 <div class="modal fade" id="updatemodal<?php echo $category['category_id'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -22,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" enctype="multipart/form-data" action='<?php echo $_SERVER['PHP_SELF'] ?>'>
+                <form method="POST" enctype="multipart/form-data" action="page_assets/categories/udpate_engine.php">
                     <input type="hidden" name="category_id" value="<?php echo $category['category_id'] ?>">
                     <div class="row">
                         <div class="form-group text-left mb-3 col">
